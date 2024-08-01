@@ -111,10 +111,10 @@ void delete_first(){
      cout << "The list is empty" << endl; 
     }else{
         node *p = first;
-        node *del = p;
-        first = p->link;
-        p->link->prev = NULL;
-        delete del;
+        first = first->link;
+        first->link->prev = NULL;
+
+        delete p;
         }
 }
 void delete_node(int c){
